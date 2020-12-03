@@ -13,6 +13,12 @@ const dataList = [
   { key: "3" },
   { key: "4" },
   { key: "5" },
+  { key: "6" },
+  { key: "7" },
+  { key: "8" },
+  { key: "9" },
+  { key: "10" },
+  { key: "11" },
 ];
 export default class App extends Component {
   formatData = (dataList, numColumns) => {
@@ -63,7 +69,7 @@ const styles = StyleSheet.create({
   },
   item: {
     flex: 1,
-    backgroundColor: "#57485d",
+    backgroundColor: "#8c0f2e",
     alignItems: "center",
     justifyContent: "center",
     margin: 1,
