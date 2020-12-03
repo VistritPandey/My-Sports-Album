@@ -13,7 +13,7 @@ export default MainStackScreens = () => {
   const tabBarOptions = {
     showLabel: false,
     style: {
-      backgroundColor: "#8c0f2e",
+      backgroundColor: "#c30000",
       paddingBottom: 12,
     },
   };
@@ -42,7 +42,7 @@ export default MainStackScreens = () => {
         <Ionicons
           name={iconName}
           size={24}
-          color={focused ? "#ffffff" : "#666666"}
+          color={focused ? "#ffffff" : "#000000"}
         />
       );
     },
