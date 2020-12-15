@@ -1,6 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { Component } from "react";
 import { StyleSheet, Text, View, FlatList, Dimensions } from "react-native";
+import SecondScreen from "./SecondScreen";
 
 const numColumns = 3; // researched that there are 30 teams in baseball in the US, so thought that 3 teams per column would be perfect. Can change it according to your preference
 
@@ -21,6 +22,12 @@ const dataList = [
   { key: "11" },
 ];
 export default class App extends Component {
+  cb() {
+    this.props.navigator.push({
+      component: SecondScreen,
+    });
+  }
+
   formatData = (dataList, numColumns) => {
     const totalRows = Math.floor(dataList.length / numColumns);
     let totalLastRow = dataList.length - totalRows * numColumns;
