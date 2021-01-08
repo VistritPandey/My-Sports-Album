@@ -49,10 +49,17 @@ export default MainStackScreens = () => {
   });
 
   return (
+    
+    <Header
+  leftComponent={{ icon: 'menu', color: '#fff' }}
+  centerComponent={{ text: 'MY TITLE', style: { color: '#fff' } }}
+  rightComponent={{ icon: 'home', color: '#fff' }}
+/>
     <MainStack.Navigator
       tabBarOptions={tabBarOptions}
       screenOptions={screenOptions}
     >
+    
       <MainStack.Screen name="Home" component={HomeScreen} />
       <MainStack.Screen name="Message" component={MessageScreen} />
       <MainStack.Screen name="Notification" component={NotificationScreen} />
