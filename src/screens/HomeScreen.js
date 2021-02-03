@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -72,7 +72,7 @@ export default function App() {
                 borderColor: "#ff0000",
               }}
             />
-            <Text>Test</Text>
+            <Text style={styles.tex}>1/100</Text>
           </TouchableOpacity>
         )}
       />
@@ -84,5 +84,8 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     paddingTop: 35,
+  },
+  tex: {
+    paddingLeft: 40,
   },
 });
