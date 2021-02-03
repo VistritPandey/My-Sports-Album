@@ -170,5 +170,3 @@ const Loading = styled.ActivityIndicator.attrs((props) => ({
   color: "#ffffff",
   size: "small",
 }))``;
-
-//const StatusBar = styled.StatusBar``;
