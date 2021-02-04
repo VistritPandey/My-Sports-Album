@@ -1,7 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-
+import TeamScreen from "../screens/TeamScreen";
 import HomeScreen from "../screens/HomeScreen";
 import MessageScreen from "../screens/MessageScreen";
 import NotificationScreen from "../screens/NotificationScreen";
@@ -57,6 +57,7 @@ export default MainStackScreens = () => {
       <MainStack.Screen name="Message" component={MessageScreen} />
       <MainStack.Screen name="Notification" component={NotificationScreen} />
       <MainStack.Screen name="Profile" component={ProfileScreen} />
+      <MainStack.Screen name="Team" component={TeamScreen} />
     </MainStack.Navigator>
   );
 };
