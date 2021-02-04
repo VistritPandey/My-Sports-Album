@@ -9,8 +9,8 @@ import {
   TouchableHighlight,
 } from "react-native";
 
-export default TeamScreen = (props) => {
-  const { navigate } = props.navigation;
+export const TeamScreen = () => {
+  //const { navigate } = props.navigation;
   return (
     <View>
       <Text>Team Screen</Text>

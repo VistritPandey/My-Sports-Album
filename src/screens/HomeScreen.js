@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { Component, useState } from "react";
+import { NavigationContainer } from "@react-navigation/native";
 import {
   StyleSheet,
   Text,
@@ -14,7 +15,7 @@ import SecondScreen from "./SecondScreen";
 const numColumns = 3;
 const WIDTH = Dimensions.get("window").width;
 
-export default function App() {
+export default function HomeScreen({ navigation }) {
   const [images, setimages] = useState([
     { src: require("../../assets/Logos/Angels.png"), key: "1" },
     { src: require("../../assets/Logos/Astros.png"), key: "2" },
@@ -55,7 +56,7 @@ export default function App() {
         showsHorizontalScrollIndicator={true}
         data={images}
         renderItem={({ item }) => (
-          <TouchableOpacity>
+          <TouchableOpacity onPress={() => navigation.navigate("TeamScreen")}>
             <Image
               source={item.src}
               style={{
@@ -72,7 +73,7 @@ export default function App() {
                 borderColor: "#ff0000",
               }}
             />
-            <Text style={styles.tex}>1/100</Text>
+            <Text style={styles.tex}>{item.key}/100</Text>
           </TouchableOpacity>
         )}
       />

@@ -57,7 +57,6 @@ export default MainStackScreens = () => {
       <MainStack.Screen name="Message" component={MessageScreen} />
       <MainStack.Screen name="Notification" component={NotificationScreen} />
       <MainStack.Screen name="Profile" component={ProfileScreen} />
-      <MainStack.Screen name="Team" component={TeamScreen} />
     </MainStack.Navigator>
   );
 };
