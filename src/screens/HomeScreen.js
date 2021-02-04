@@ -1,6 +1,4 @@
-import { StatusBar } from "expo-status-bar";
-import React, { Component, useState } from "react";
-import { NavigationContainer } from "@react-navigation/native";
+import React, { useState } from "react";
 import {
   StyleSheet,
   Text,
@@ -10,7 +8,6 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
-import SecondScreen from "./SecondScreen";
 
 const numColumns = 3;
 const WIDTH = Dimensions.get("window").width;
