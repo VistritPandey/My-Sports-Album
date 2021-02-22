@@ -41,7 +41,7 @@ export default function ({ navigation }) {
     { src: require("../../assets/Logos/Whitesox.png"), key: "25" },
     { src: require("../../assets/Logos/Yankees.png"), key: "26" },
     { src: require("../../assets/Logos/Cubs.png"), key: "27" },
-    { src: require("../../assets/Logos/RedSox.png"), key: "28" },
+    { src: require("../../assets/Logos/Redsox.png"), key: "28" },
     { src: require("../../assets/Logos/Rangers.png"), key: "29" },
     { src: require("../../assets/Logos/Nationals.png"), key: "30" },
   ]);
@@ -64,10 +64,8 @@ export default function ({ navigation }) {
                 backgroundColor: "#fff",
                 alignItems: "center",
                 justifyContent: "center",
-                margin: 1,
                 height: WIDTH / numColumns,
                 borderRadius: 10,
-                //borderColor: "#ff0000",
               }}
             />
             <Text style={styles.tex}>{item.key}/100</Text>
@@ -84,6 +82,7 @@ const styles = StyleSheet.create({
     paddingTop: 35,
   },
   tex: {
+    backgroundColor: "#fff",
     paddingLeft: 40,
   },
 });
