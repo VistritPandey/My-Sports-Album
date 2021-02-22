@@ -40,10 +40,10 @@ export default function ({ navigation }) {
     { src: require("../../assets/Logos/Twins.png"), key: "24" },
     { src: require("../../assets/Logos/Whitesox.png"), key: "25" },
     { src: require("../../assets/Logos/Yankees.png"), key: "26" },
-    { src: require("../../assets/Logos/Chicago_Cubs.png"), key: "27" },
-    { src: require("../../assets/Logos/RedSoxPrimary.png"), key: "28" },
-    { src: require("../../assets/Logos/Texas_Rangers.png"), key: "29" },
-    { src: require("../../assets/Logos/Washington_Nationals.png"), key: "30" },
+    { src: require("../../assets/Logos/Cubs.png"), key: "27" },
+    { src: require("../../assets/Logos/RedSox.png"), key: "28" },
+    { src: require("../../assets/Logos/Rangers.png"), key: "29" },
+    { src: require("../../assets/Logos/Nationals.png"), key: "30" },
   ]);
 
   return (
