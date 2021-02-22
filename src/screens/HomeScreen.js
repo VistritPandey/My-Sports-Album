@@ -67,7 +67,7 @@ export default function ({ navigation }) {
                 margin: 1,
                 height: WIDTH / numColumns,
                 borderRadius: 10,
-                borderColor: "#ff0000",
+                //borderColor: "#ff0000",
               }}
             />
             <Text style={styles.tex}>{item.key}/100</Text>
