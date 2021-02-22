@@ -41,7 +41,7 @@ export default function ({ navigation }) {
     { src: require("../../assets/Logos/Whitesox.png"), key: "25" },
     { src: require("../../assets/Logos/Yankees.png"), key: "26" },
     { src: require("../../assets/Logos/Cubs.png"), key: "27" },
-    { src: require("../../assets/Logos/Redsox.png"), key: "28" },
+    { src: require("../../assets/Logos/Cardinals.png"), key: "28" },
     { src: require("../../assets/Logos/Rangers.png"), key: "29" },
     { src: require("../../assets/Logos/Nationals.png"), key: "30" },
   ]);
