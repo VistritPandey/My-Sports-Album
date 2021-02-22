@@ -13,7 +13,7 @@ export default MainStackScreens = () => {
   const tabBarOptions = {
     showLabel: false,
     style: {
-      backgroundColor: "#c30000",
+      backgroundColor: "#002D72",
       paddingBottom: 12,
     },
   };
@@ -39,7 +39,7 @@ export default MainStackScreens = () => {
           iconName = "ios-home";
       }
       return (
-        <Ionicons name={iconName} size={24} color={focused ? "#000" : "#fff"} />
+        <Ionicons name={iconName} size={24} color={focused ? "grey" : "#fff"} />
       );
     },
   });

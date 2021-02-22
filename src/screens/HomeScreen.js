@@ -61,6 +61,7 @@ export default function ({ navigation }) {
                 borderWidth: 1,
                 resizeMode: "contain",
                 flex: 1,
+                //margin: 3,
                 backgroundColor: "#fff",
                 alignItems: "center",
                 justifyContent: "center",
