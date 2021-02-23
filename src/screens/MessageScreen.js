@@ -77,11 +77,15 @@ export default MessageScreen = () => {
       <View style={styles.container}>
         <TextInput
           style={styles.input}
-          placeholder="Enter name"
+          placeholder="Type a name for yourself"
           value={name}
           onChangeText={setName}
         />
-        <Button onPress={handlePress} title="Enter the chat" color="red" />
+        <Button
+          onPress={handlePress}
+          title="Enter World chat"
+          color="#002D72"
+        />
       </View>
     );
   }
