@@ -133,7 +133,7 @@ export default SignUpScreen = ({ navigation }) => {
       <SignIn onPress={() => navigation.navigate("SignIn")}>
         <Text small center>
           Already a user?{" "}
-          <Text bold color="tomato">
+          <Text bold color="#002D72">
             Sign In
           </Text>
         </Text>
@@ -158,21 +158,11 @@ const Main = styled.View`
 const RightCircle = styled.View`
   background-color: #f60000;
   position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 200px;
-  right: -100px;
-  top: -200px;
 `;
 
 const LeftCircle = styled.View`
   background-color: #febea8;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  left: -50px;
-  top: -50px;
 `;
 
 const HeaderGraphic = styled.View`
@@ -206,7 +196,7 @@ const SignUpContainer = styled.TouchableOpacity`
   height: 48px;
   align-items: center;
   justify-content: center;
-  background-color: #f60000;
+  background-color: #002d72;
   border-radius: 6px;
 `;
 
@@ -238,5 +228,3 @@ const DefaultProfilePhoto = styled.View`
 const ProfilePhoto = styled.Image`
   flex: 1;
 `;
-
-//const StatusBar = styled.StatusBar``;

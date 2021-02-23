@@ -110,21 +110,11 @@ const Main = styled.View`
 const RightCircle = styled.View`
   background-color: #f60000;
   position: absolute;
-  width: 400px;
-  height: 400px;
-  border-radius: 200px;
-  right: -100px;
-  top: -200px;
 `;
 
 const LeftCircle = styled.View`
   background-color: #febea8;
   position: absolute;
-  width: 200px;
-  height: 200px;
-  border-radius: 100px;
-  left: -50px;
-  top: -50px;
 `;
 
 const HeaderGraphic = styled.View`
