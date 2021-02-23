@@ -85,7 +85,7 @@ export default SignInScreen = ({ navigation }) => {
       <SignUp onPress={() => navigation.navigate("SignUp")}>
         <Text small center>
           New to the App?{" "}
-          <Text bold color="tomato">
+          <Text bold color="blue">
             Sign Up
           </Text>
         </Text>
@@ -148,7 +148,7 @@ const SignInContainer = styled.TouchableOpacity`
   height: 48px;
   align-items: center;
   justify-content: center;
-  background-color: #f60000;
+  background-color: #002d72;
   border-radius: 6px;
 `;
 

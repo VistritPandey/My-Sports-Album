@@ -133,7 +133,7 @@ export default SignUpScreen = ({ navigation }) => {
       <SignIn onPress={() => navigation.navigate("SignIn")}>
         <Text small center>
           Already a user?{" "}
-          <Text bold color="#002D72">
+          <Text bold color="blue">
             Sign In
           </Text>
         </Text>
