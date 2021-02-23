@@ -1,5 +1,6 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useContext, useState } from "react";
+import { ImageBackground } from "react-native";
 import styled from "styled-components";
 import Text from "../components/Text";
 import { FirebaseContext } from "../context/FirebaseContext";
@@ -38,63 +39,69 @@ export default SignInScreen = ({ navigation }) => {
 
   return (
     <Container>
-      <Main>
-        <Text title semi center>
-          {" "}
-          Welcome Back
-        </Text>
-        <Text title semi center>
-          {" "}
-          to MSA
-        </Text>
-      </Main>
-      <Auth>
-        <AuthContainer>
-          <AuthTitle> Email Address </AuthTitle>
-          <AuthField
-            autoCapitalize="none"
-            autoCompleteType="email"
-            autoCorrect={false}
-            autoFocus={true}
-            keyboardType="email-address"
-            onChangeText={(email) => setEmail(email.trim())}
-            value={email}
-          />
-
-          <AuthTitle> Password </AuthTitle>
-
-          <AuthField
-            autoCapitalize="none"
-            autoCompleteType="password"
-            autoCorrect={false}
-            secureTextEntry={true}
-            onChangeText={(password) => setPassword(password.trim())}
-            value={password}
-          />
-        </AuthContainer>
-      </Auth>
-      <SignInContainer onPress={signIn} disabled={loading}>
-        {loading ? (
-          <Loading />
-        ) : (
-          <Text bold center color="#fff">
-            Sign In
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        style={backgroundImg}
+        imageStyle={{ resizeMode: "cover" }}
+      >
+        <Main>
+          <Text title semi center>
+            {" "}
+            Welcome Back
           </Text>
-        )}
-      </SignInContainer>
-      <SignUp onPress={() => navigation.navigate("SignUp")}>
-        <Text small center>
-          New to the App?{" "}
-          <Text bold color="blue">
-            Sign Up
+          <Text title semi center>
+            {" "}
+            to MSA
           </Text>
-        </Text>
-      </SignUp>
-      <HeaderGraphic>
-        <RightCircle />
-        <LeftCircle />
-      </HeaderGraphic>
-      <StatusBar barStyle="light-content" />
+        </Main>
+        <Auth>
+          <AuthContainer>
+            <AuthTitle> Email Address </AuthTitle>
+            <AuthField
+              autoCapitalize="none"
+              autoCompleteType="email"
+              autoCorrect={false}
+              autoFocus={true}
+              keyboardType="email-address"
+              onChangeText={(email) => setEmail(email.trim())}
+              value={email}
+            />
+
+            <AuthTitle> Password </AuthTitle>
+
+            <AuthField
+              autoCapitalize="none"
+              autoCompleteType="password"
+              autoCorrect={false}
+              secureTextEntry={true}
+              onChangeText={(password) => setPassword(password.trim())}
+              value={password}
+            />
+          </AuthContainer>
+        </Auth>
+        <SignInContainer onPress={signIn} disabled={loading}>
+          {loading ? (
+            <Loading />
+          ) : (
+            <Text bold center color="#fff">
+              Sign In
+            </Text>
+          )}
+        </SignInContainer>
+        <SignUp onPress={() => navigation.navigate("SignUp")}>
+          <Text small center>
+            New to the App?{" "}
+            <Text bold color="blue">
+              Sign Up
+            </Text>
+          </Text>
+        </SignUp>
+        <HeaderGraphic>
+          <RightCircle />
+          <LeftCircle />
+        </HeaderGraphic>
+        <StatusBar barStyle="light-content" />
+      </ImageBackground>
     </Container>
   );
 };
@@ -160,3 +167,9 @@ const Loading = styled.ActivityIndicator.attrs((props) => ({
   color: "#ffffff",
   size: "small",
 }))``;
+
+const backgroundImg = styled.View`
+  flex: 1;
+  resizemode: "cover";
+  justifycontent: "center";
+`;

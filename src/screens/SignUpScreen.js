@@ -1,5 +1,5 @@
 import { StatusBar } from "expo-status-bar";
-import { Platform } from "react-native";
+import { ImageBackground, Platform } from "react-native";
 import React, { useContext, useState } from "react";
 import styled from "styled-components";
 import Text from "../components/Text";
@@ -8,6 +8,8 @@ import * as Permissions from "expo-permissions";
 import * as ImagePicker from "expo-image-picker";
 import { FirebaseContext } from "../context/FirebaseContext";
 import { UserContext } from "../context/UserContext";
+
+const image = { uri: "https://reactjs.org/logo-og.png" };
 
 export default SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState();
@@ -75,74 +77,80 @@ export default SignUpScreen = ({ navigation }) => {
 
   return (
     <Container>
-      <Main>
-        <Text title semi center>
-          Sign Up for the App
-        </Text>
-      </Main>
-
-      <ProfilePhotoContainer onPress={addProfilePhoto}>
-        {profilePhoto ? (
-          <ProfilePhoto source={{ uri: profilePhoto }} />
-        ) : (
-          <DefaultProfilePhoto>
-            <AntDesign name="plus" size={24} color="#ffffff" />
-          </DefaultProfilePhoto>
-        )}
-      </ProfilePhotoContainer>
-
-      <Auth>
-        <AuthContainer>
-          <AuthTitle> Username </AuthTitle>
-          <AuthField
-            autoCapitalize="none"
-            autoCorrect={false}
-            autoFocus={true}
-            onChangeText={(username) => setUsername(username.trim())}
-            value={username}
-          />
-          <AuthTitle> Email Address </AuthTitle>
-          <AuthField
-            autoCapitalize="none"
-            autoCompleteType="email"
-            autoCorrect={false}
-            keyboardType="email-address"
-            onChangeText={(email) => setEmail(email.trim())}
-            value={email}
-          />
-          <AuthTitle> Password </AuthTitle>
-          <AuthField
-            autoCapitalize="none"
-            autoCompleteType="password"
-            autoCorrect={false}
-            secureTextEntry={true}
-            onChangeText={(password) => setPassword(password.trim())}
-            value={password}
-          />
-        </AuthContainer>
-      </Auth>
-      <SignUpContainer onPress={signUp} disabled={loading}>
-        {loading ? (
-          <Loading />
-        ) : (
-          <Text bold center color="#fff">
-            Sign Up
+      <ImageBackground
+        source={require("../../assets/background.png")}
+        style={backgroundImg}
+        imageStyle={{ resizeMode: "cover" }}
+      >
+        <Main>
+          <Text title semi center>
+            Sign Up for the App
           </Text>
-        )}
-      </SignUpContainer>
-      <SignIn onPress={() => navigation.navigate("SignIn")}>
-        <Text small center>
-          Already a user?{" "}
-          <Text bold color="blue">
-            Sign In
+        </Main>
+
+        <ProfilePhotoContainer onPress={addProfilePhoto}>
+          {profilePhoto ? (
+            <ProfilePhoto source={{ uri: profilePhoto }} />
+          ) : (
+            <DefaultProfilePhoto>
+              <AntDesign name="plus" size={24} color="#ffffff" />
+            </DefaultProfilePhoto>
+          )}
+        </ProfilePhotoContainer>
+
+        <Auth>
+          <AuthContainer>
+            <AuthTitle> Username </AuthTitle>
+            <AuthField
+              autoCapitalize="none"
+              autoCorrect={false}
+              autoFocus={true}
+              onChangeText={(username) => setUsername(username.trim())}
+              value={username}
+            />
+            <AuthTitle> Email Address </AuthTitle>
+            <AuthField
+              autoCapitalize="none"
+              autoCompleteType="email"
+              autoCorrect={false}
+              keyboardType="email-address"
+              onChangeText={(email) => setEmail(email.trim())}
+              value={email}
+            />
+            <AuthTitle> Password </AuthTitle>
+            <AuthField
+              autoCapitalize="none"
+              autoCompleteType="password"
+              autoCorrect={false}
+              secureTextEntry={true}
+              onChangeText={(password) => setPassword(password.trim())}
+              value={password}
+            />
+          </AuthContainer>
+        </Auth>
+        <SignUpContainer onPress={signUp} disabled={loading}>
+          {loading ? (
+            <Loading />
+          ) : (
+            <Text bold center color="#fff">
+              Sign Up
+            </Text>
+          )}
+        </SignUpContainer>
+        <SignIn onPress={() => navigation.navigate("SignIn")}>
+          <Text small center>
+            Already a user?{" "}
+            <Text bold color="blue">
+              Sign In
+            </Text>
           </Text>
-        </Text>
-      </SignIn>
-      <HeaderGraphic>
-        <RightCircle />
-        <LeftCircle />
-      </HeaderGraphic>
-      <StatusBar barStyle="light-content" />
+        </SignIn>
+        <HeaderGraphic>
+          <RightCircle />
+          <LeftCircle />
+        </HeaderGraphic>
+        <StatusBar barStyle="light-content" />
+      </ImageBackground>
     </Container>
   );
 };
@@ -227,4 +235,10 @@ const DefaultProfilePhoto = styled.View`
 
 const ProfilePhoto = styled.Image`
   flex: 1;
+`;
+
+const backgroundImg = styled.View`
+  flex: 1;
+  resizemode: "cover";
+  justifycontent: "center";
 `;
