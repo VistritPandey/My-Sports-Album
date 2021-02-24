@@ -80,7 +80,7 @@ export default SignUpScreen = ({ navigation }) => {
       <ImageBackground
         source={require("../../assets/background.png")}
         style={backgroundImg}
-        imageStyle={{ resizeMode: "cover" }}
+        imageStyle={{ opacity: 0.3 }}
       >
         <Main>
           <Text title semi center>
