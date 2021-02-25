@@ -66,6 +66,7 @@ export default function ({ navigation }) {
                 justifyContent: "center",
                 height: WIDTH / numColumns,
                 borderRadius: 10,
+                borderColor: "#fff",
               }}
             />
             <Text style={styles.tex}>{item.key}/100</Text>
