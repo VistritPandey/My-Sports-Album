@@ -25,9 +25,10 @@ export default function ({ navigation }) {
   const [images, setimages] = useState([
     { src: require("../../assets/lock.png"), key: "1" }
   ]);
-  const [refreshPage, setRefreshPage] = useState("");
+  
   const [lock, setlock] = useState(true);
   const [curr, setcurr] = useState(0)
+  const [videoURL,setvideoURL] = useState('https://firebasestorage.googleapis.com/v0/b/msa--demo.appspot.com/o/Phillies%2FRPReplay_Final1599145863.mov?alt=media&token=ee5d62c0-e583-4c48-b056-bc1627b160cf')
   const val = async () => {
     try {
       let response = await fetch(
@@ -160,7 +161,8 @@ else{
         renderItem={() => (
           
           
-          <TouchableOpacity onPress={() => n}>
+          <TouchableOpacity onPress={() => navigation.navigate('video', { vidURL: videoURL})}>
+            
             <Image
               source={{
                 uri: 'https://firebasestorage.googleapis.com/v0/b/msa--demo.appspot.com/o/Phillies%2FPhillies%20Triple%20Play.jpg?alt=media&token=02f01f5a-8ae3-47c0-b823-858157bd5c08',

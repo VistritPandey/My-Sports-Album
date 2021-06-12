@@ -6,6 +6,7 @@ import HomeScreen from "../screens/HomeScreen";
 import cardsScreen from "../screens/cardsScreen";
 import MessageScreen from "../screens/MessageScreen";
 import NotificationScreen from "../screens/NotificationScreen";
+import videoScreen from "../screens/videoScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 
 export default MainStackScreens = () => {
@@ -54,6 +55,7 @@ export default MainStackScreens = () => {
     >
       <MainStack.Screen name="Home" component={HomeScreen} />
       <MainStack.Screen name="card" component={cardsScreen} />
+      <MainStack.Screen name="video" component={videoScreen} />
       <MainStack.Screen name="Message" component={MessageScreen} />
       <MainStack.Screen name="Notification" component={NotificationScreen} />
       <MainStack.Screen name="Profile" component={ProfileScreen} />
