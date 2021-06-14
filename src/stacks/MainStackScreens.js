@@ -1,13 +1,13 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Ionicons } from "@expo/vector-icons";
-import TeamScreen from "../screens/TeamScreen";
 import HomeScreen from "../screens/HomeScreen";
 import cardsScreen from "../screens/cardsScreen";
 import MessageScreen from "../screens/MessageScreen";
 import NotificationScreen from "../screens/NotificationScreen";
 import videoScreen from "../screens/videoScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import icons from "../components/icons";
+import { Image } from "react-native";
 
 export default MainStackScreens = () => {
   const MainStack = createBottomTabNavigator();
@@ -26,24 +26,27 @@ export default MainStackScreens = () => {
 
       switch (route.name) {
         case "Home":
-          iconName = "ios-home";
+          iconName = icons.baseball;
           break;
         case "Message":
-          iconName = "ios-chatboxes";
+          iconName = icons.message;
           break;
         case "Notification":
-          iconName = "ios-notifications";
+          iconName = icons.mlb;
           break;
         case "Profile":
-          iconName = "ios-person";
+          iconName = icons.settings;
           break;
-        // case "card":
-        //   break;
-        default:
-          iconName = "ios-home";
       }
       return (
-        <Ionicons name={iconName} size={24} color={focused ? "grey" : "#fff"} />
+        <Image
+          source={iconName}
+          style={{
+            tintColor: focused ? "grey" : "#fff",
+            width: 28,
+            height: 28,
+          }}
+        />
       );
     },
   });
@@ -55,9 +58,9 @@ export default MainStackScreens = () => {
     >
       <MainStack.Screen name="Home" component={HomeScreen} />
       <MainStack.Screen name="card" component={cardsScreen} />
-      <MainStack.Screen name="video" component={videoScreen} />
       <MainStack.Screen name="Message" component={MessageScreen} />
       <MainStack.Screen name="Notification" component={NotificationScreen} />
+      <MainStack.Screen name="video" component={videoScreen} />
       <MainStack.Screen name="Profile" component={ProfileScreen} />
     </MainStack.Navigator>
   );
