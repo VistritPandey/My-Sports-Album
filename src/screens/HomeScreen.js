@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+
+
 import {
   StyleSheet,
   Text,
@@ -8,6 +10,7 @@ import {
   Dimensions,
   TouchableOpacity,
 } from "react-native";
+
 
 const numColumns = 3;
 const WIDTH = Dimensions.get("window").width;
@@ -45,15 +48,22 @@ export default function ({ navigation }) {
     { src: require("../../assets/Logos/Athletics.png"), key: "29" },
     { src: require("../../assets/Logos/Rangers.png"), key: "30" },
   ]);
-
+  
+  
+  
   return (
+    
     <View style={styles.container}>
+      
+    
       <FlatList
         numColumns={numColumns}
         showsHorizontalScrollIndicator={true}
         data={images}
         renderItem={({ item }) => (
-          <TouchableOpacity>
+          
+          
+          <TouchableOpacity onPress={() => navigation.navigate('card')}>
             <Image
               source={item.src}
               style={{
@@ -71,8 +81,10 @@ export default function ({ navigation }) {
             />
             <Text style={styles.tex}>{item.key}/100</Text>
           </TouchableOpacity>
+          
         )}
       />
+      
     </View>
   );
 }

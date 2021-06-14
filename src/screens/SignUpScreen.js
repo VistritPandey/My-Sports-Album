@@ -10,7 +10,7 @@ import { FirebaseContext } from "../context/FirebaseContext";
 import { UserContext } from "../context/UserContext";
 
 const image = { uri: "https://reactjs.org/logo-og.png" };
-
+const axios = require('axios')
 export default SignUpScreen = ({ navigation }) => {
   const [email, setEmail] = useState();
   const [username, setUsername] = useState();
@@ -66,8 +66,17 @@ export default SignUpScreen = ({ navigation }) => {
 
     try {
       const createdUser = await firebase.createUser(user);
-
+      global.email=email
       setUser({ ...createdUser, isLoggedIn: true });
+      const urlNeeded = 'http://10.0.2.2:5000/insert-one/'+email+'/';
+      // axios.post(urlNeeded, {"h":""})
+      // .then(function (response) {
+      //   console.log(response);
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
+      fetch(urlNeeded);
     } catch (error) {
       console.log("Error @signUp: ", error);
     } finally {

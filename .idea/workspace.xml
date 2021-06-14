@@ -11,8 +11,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80ea2583-0f7c-483b-ad0a-d69c6296d0e9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/screens/videoScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.expo/packager-info.json" beforeDir="false" afterPath="$PROJECT_DIR$/.expo/packager-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/screens/ProfileScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/ProfileScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screens/cardsScreen.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/screens/cardsScreen.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/stacks/MainStackScreens.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/stacks/MainStackScreens.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,20 +59,33 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="-6" y="106" width="1146" height="498" key="AVDManager" timestamp="1606984436793">
-      <screen x="0" y="0" width="1366" height="738" />
+    <state x="207" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1618089472777">
+      <screen x="0" y="0" width="1504" height="963" />
     </state>
-    <state x="-6" y="106" width="1146" height="498" key="AVDManager/0.0.1366.738@0.0.1366.738" timestamp="1606984436793" />
+    <state x="207" y="137" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1504.963@0.0.1504.963" timestamp="1618089472777" />
+    <state x="152" y="120" width="1200" height="723" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1623505038934">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="152" y="120" width="1200" height="723" key="com.android.tools.idea.avdmanager.AvdListDialog/0.0.1504.963@0.0.1504.963" timestamp="1623505038934" />
+    <state x="448" y="306" key="com.intellij.ide.util.TipDialog" timestamp="1623502268334">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="448" y="306" key="com.intellij.ide.util.TipDialog/0.0.1504.963@0.0.1504.963" timestamp="1623502268334" />
+    <state x="409" y="223" key="run.anything.popup" timestamp="1618089440066">
+      <screen x="0" y="0" width="1504" height="963" />
+    </state>
+    <state x="409" y="223" key="run.anything.popup/0.0.1504.963@0.0.1504.963" timestamp="1618089440066" />
   </component>
 </project>

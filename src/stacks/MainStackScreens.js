@@ -3,8 +3,10 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import TeamScreen from "../screens/TeamScreen";
 import HomeScreen from "../screens/HomeScreen";
+import cardsScreen from "../screens/cardsScreen";
 import MessageScreen from "../screens/MessageScreen";
 import NotificationScreen from "../screens/NotificationScreen";
+import videoScreen from "../screens/videoScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 
 export default MainStackScreens = () => {
@@ -35,6 +37,8 @@ export default MainStackScreens = () => {
         case "Profile":
           iconName = "ios-person";
           break;
+        // case "card":
+        //   break;
         default:
           iconName = "ios-home";
       }
@@ -50,6 +54,8 @@ export default MainStackScreens = () => {
       screenOptions={screenOptions}
     >
       <MainStack.Screen name="Home" component={HomeScreen} />
+      <MainStack.Screen name="card" component={cardsScreen} />
+      <MainStack.Screen name="video" component={videoScreen} />
       <MainStack.Screen name="Message" component={MessageScreen} />
       <MainStack.Screen name="Notification" component={NotificationScreen} />
       <MainStack.Screen name="Profile" component={ProfileScreen} />
