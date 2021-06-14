@@ -87,7 +87,7 @@ export default function ({ navigation }) {
     console.log("locked");
     return (
       <View style={styles.container}>
-        <Text style={styles.TopBar}>{curr}</Text>
+        <Text style={styles.TopBar}>{curr} LS</Text>
 
         <FlatList
           numColumns={numColumns}
