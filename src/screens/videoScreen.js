@@ -49,10 +49,7 @@ export default function ({ route, navigation }) {
             />
           )}
         />
-        <Button
-          onPress={() => stateChange(false)}
-          title="Flip to See the video"
-        />
+        <Button onPress={() => stateChange(false)} title="Flip" />
       </View>
     );
   } else {
@@ -63,8 +60,9 @@ export default function ({ route, navigation }) {
           rate={1.0}
           volume={1.0}
           isMuted={false}
+          orientation="landscape"
           useNativeControls={true} //need feedback on it
-          resizeMode="cover"
+          resizeMode="contain"
           shouldPlay
           style={{
             width: 370,
@@ -72,10 +70,7 @@ export default function ({ route, navigation }) {
           }}
         />
         <View style={{ height: 100, marginTop: 10 }}>
-          <Button
-            onPress={() => stateChange(true)}
-            title="Flip to See the Description"
-          />
+          <Button onPress={() => stateChange(true)} title="Flip" />
         </View>
       </View>
     );
