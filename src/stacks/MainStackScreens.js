@@ -62,6 +62,6 @@ export default MainStackScreens = () => {
       <MainStack.Screen name="Notification" component={NotificationScreen} />
       <MainStack.Screen name="video" component={videoScreen} />
       <MainStack.Screen name="Profile" component={ProfileScreen} />
-    </MainStack.Navigator>
+    </MainStack.Navigator> //Test
   );
 };
