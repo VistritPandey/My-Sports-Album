@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-
 import { Video } from "expo-av";
+import * as ScreenOrientation from "expo-screen-orientation";
 
 import {
   Button,
@@ -10,15 +10,15 @@ import {
   FlatList,
   Dimensions,
 } from "react-native";
-// Within your render function, assuming you have a file called
-// "background.mp4" in your project. You can include multiple videos
-// on a single screen if you like.
 
 export default function ({ route, navigation }) {
   const numColumns = 3;
   const WIDTH = Dimensions.get("window").width;
   const uRl = route.params;
   console.log("vid", uRl["vidURL"]);
+
+  const [orientationIsLandscape, setOrientationIsLandscape] = useState(false);
+
   const [images, setimages] = useState([
     { src: require("../../assets/Phillies_card.png"), key: "1" },
   ]);
@@ -60,14 +60,16 @@ export default function ({ route, navigation }) {
           rate={1.0}
           volume={1.0}
           isMuted={false}
-          orientation="landscape"
-          useNativeControls={true} //need feedback on it
+          useNativeControls={true}
           resizeMode="contain"
           shouldPlay
           style={{
             width: 370,
             height: 400,
           }}
+          onReadyForDisplay={ScreenOrientation.lockAsync(
+            ScreenOrientation.OrientationLock.DEFAULT //causing error
+          )}
         />
         <View style={{ height: 100, marginTop: 10 }}>
           <Button onPress={() => stateChange(true)} title="Flip" />
